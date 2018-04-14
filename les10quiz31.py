@@ -21,6 +21,10 @@ def dateIsBefore(year1, month1, day1, year2, month2, day2):
     return False        
 
 def leapcheck(year):
+    if year % 400 == 0:
+        return True
+    if year % 100 == 0:
+        return False
     if year%4==0: #divides year by 4, if there is no remainder, returns True for leap year
         return True
     return False
